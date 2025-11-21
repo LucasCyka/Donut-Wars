@@ -7,8 +7,6 @@ static int gameHeight = 720;
 
 scene CurrentScene = GAMEPLAY; 
 
-//Texture2D jetText;
-
 int main(){
 
     SetTargetFPS(30);
@@ -16,8 +14,6 @@ int main(){
 	
 	LoadSprites(); //TODO: check for errors
 
-	//jetText = LoadTexture("../assets/newTileset.png");
-	
     while(!WindowShouldClose()){
     	 
 		BeginDrawing();
