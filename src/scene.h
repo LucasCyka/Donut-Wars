@@ -1,6 +1,8 @@
 #ifndef SCENE_H
 #define SCENE_H
 
+#include "raylib.h" 
+
 typedef enum GameScene  {
 	LOGO,
 	MENU,
@@ -12,7 +14,7 @@ typedef enum GameScene  {
 extern scene CurrentScene;
 
 
-void UpdateGameplayScene();
+void UpdateGameplayScene(Vector2 mousePos);
 void DrawGameplayScene();
 int  IsStateOver();
 

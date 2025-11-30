@@ -1,9 +1,9 @@
 #include "assets.h"
 
-Texture2D jetText;
+Texture2D jetTextMoving;
 
 int LoadSprites(){
-	jetText = LoadTexture("../assets/newTileset.png");
+	jetTextMoving = LoadTexture("../assets/newTileset.png");
 	
 	//TODO: error handling
 	return 0;

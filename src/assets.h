@@ -3,7 +3,7 @@
 
 #include "raylib.h"
 
-extern Texture2D jetText;
+extern Texture2D jetTextMoving;
 
 
 int LoadSprites();
