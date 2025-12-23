@@ -9,7 +9,6 @@ static RenderTexture2D framebufferRender;
 
 scene CurrentScene = GAMEPLAY; 
 
-
 void UpdateFrame();
 void DrawFrame();
 
@@ -18,7 +17,7 @@ Vector2 GetVirtualMousePosition();
 int main(){
 
     SetTargetFPS(30);
-	SetConfigFlags(FLAG_WINDOW_RESIZABLE| FLAG_FULLSCREEN_MODE);
+	SetConfigFlags(FLAG_WINDOW_RESIZABLE);
 	InitWindow(gameWidth,gameHeight,"War of Donuts");
 	framebufferRender = LoadRenderTexture(gameWidth,gameHeight);
 	SetTextureFilter(framebufferRender.texture,TEXTURE_FILTER_BILINEAR);
@@ -51,9 +50,9 @@ void DrawFrame(){
 	BeginTextureMode(framebufferRender);
 		ClearBackground(BLACK);
 		DrawGameplayScene();
-		for(int y = 0; y < 10;y++){
+		/*for(int y = 0; y < 10;y++){
 			DrawRectangle(0,y*100+100,1280,20,RED);
-		}	
+		}*/	
 	
 	DrawText(TextFormat("%f , %f",GetVirtualMousePosition().x, GetVirtualMousePosition().y), 0,0,100,WHITE);		
 
